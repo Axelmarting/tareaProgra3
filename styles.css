@@ -57,12 +57,6 @@ article{
     padding-top: 20px;
 }
 
-#inputMedio{
-    border-radius: 40px;
-    box-sizing: border-box;
-    padding: 15px 80px;
-}
-
 #feed{
     display: flex;
     flex-direction: column;
@@ -72,12 +66,22 @@ article{
     gap: 20px;
 }
 
+#inputMedio{
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 0px 80px;
+    text-align: center;
+}
+
+
 #crearPost{
     display: flex;
-    gap: 10px;
+    justify-content: space-evenly;
+    /* gap: 10px; */
     background-color: #242526;
     border-radius: 8px;
-    padding: 10px 40px;
+    width: 100%;
+    padding: 10px 0;
 }
 
 .post{
