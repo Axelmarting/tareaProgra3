@@ -30,6 +30,15 @@ header ul{
     list-style: none;
 }
 
+header img{
+    max-width: 40px;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
 #primerAside{
     grid-row: 2;
     grid-column: 1;
