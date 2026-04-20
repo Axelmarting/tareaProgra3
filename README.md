@@ -12,7 +12,7 @@ Maqueta basica de FB donde se agrega lo explicado en cada clase.
 - [x] JavaScript
 
 ## 📸 Captura de pantalla
-![Preview del proyecto](Fotos\capturaPagina.png)
+![Preview del proyecto](fotos\capturaPagina.png)
 
 ## ✒️ Autor
 * **Axel** - [Perfil Github](https://github.com/Axelmarting)
