@@ -77,11 +77,28 @@ article{
 #crearPost{
     display: flex;
     justify-content: space-evenly;
-    /* gap: 10px; */
     background-color: #242526;
     border-radius: 8px;
     width: 100%;
     padding: 10px 0;
+}
+
+#botonPublicar {
+  background-color: #007bff; 
+  
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  border-radius: 10px; 
+
+  border: none;
+  outline: none;
+
+  padding: 5px 20px;
+
+  cursor: pointer;
 }
 
 .post{
@@ -139,5 +156,10 @@ article{
 
     #feed{
         width: 100%;
+    }
+
+    #botonPublicar{
+        padding: 0px 10px;
+        font-size: 12px;
     }
 }
