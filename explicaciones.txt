@@ -1,0 +1,50 @@
+Explicacion del cambio tema: 
+
+En el css:
+En CSS, cuando escribes dos cosas juntas sin espacio (como body.modo-claro), le 
+estás diciendo al navegador: "Aplica estos estilos solo cuando la etiqueta <body> 
+tenga también la clase modo-claro".
+
+En JS:
+
+// Buscamos el botón en el HTML por su ID y lo guardamos en una variable.
+var boton = document.getElementById('botonTema');
+
+// Guardamos la referencia al cuerpo (body) de la página para poder cambiarle el color.
+var cuerpo = document.body;
+
+// Esta función se ejecuta apenas se abre la página.
+function verificarTema() {
+  // Le preguntamos al localStorage: "¿Tienes algo guardado bajo el nombre 'preferencia-clara'?"
+  var temaGuardado = localStorage.getItem('preferencia-clara');
+  
+  // Si lo que encontramos es igual a "si"...
+  if (temaGuardado === 'si') {
+    // ...le añadimos la clase al body para que se vea blanco.
+    cuerpo.classList.add('modo-claro');
+  }
+}
+
+// Esta función se ejecuta cada vez que alguien hace click en el botón.
+function cambiarTema() {
+  // .toggle es como un interruptor: si la clase está, la quita; si no está, la pone.
+  cuerpo.classList.toggle('modo-claro');
+  
+  // Ahora preguntamos: "¿Después del click, el body se quedó con la clase 'modo-claro'?"
+  if (cuerpo.classList.contains('modo-claro')) {
+    // Si la tiene, guardamos en la memoria del navegador que el usuario quiere el modo claro.
+    localStorage.setItem('preferencia-clara', 'si');
+  } else {
+    // Si no la tiene, guardamos que "no", para que la próxima vez sea oscuro.
+    localStorage.setItem('preferencia-clara', 'no');
+  }
+}
+
+// Aquí le decimos al navegador qué funciones debe usar y cuándo:
+// Cuando la ventana (window) termine de cargar, ejecuta verificarTema.
+window.onload = verificarTema;
+
+// Cuando se haga click en el botón, ejecuta cambiarTema.
+boton.onclick = cambiarTema;
+
+--------------------------------------------------------------
